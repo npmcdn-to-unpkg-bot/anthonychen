@@ -1,0 +1,9 @@
+<div class="content container">
+  <h1><a ui-sref="projects">Projects</a> / Aquatics</h1>
+  <div class="list-group">
+    <div ng-if="projectEntries.length == 0">
+      No project entries yet.
+    </div>
+    <a class="list-group-item" ng-repeat="projectEntry in projectEntries">{{projectEntry.title}}</a>
+  </div>
+</div>

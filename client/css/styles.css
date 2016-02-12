@@ -1,0 +1,28 @@
+.glyphicon-remove:hover {
+    cursor:pointer
+}
+.nav a {
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-nav > li > a {
+    background: none !important;
+}
+.navbar-brand {
+    color: #fff;
+    font-weight-bold;
+}
+body {
+    background-color: #ccc;
+    color: #000;
+}
+.content {
+    margin-top: 50px;
+}
+.featurette {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar-inverse .navbar-nav > li > a.active, .navbar-inverse .navbar-nav > li > a.active {
+    color: #23527c;
+}

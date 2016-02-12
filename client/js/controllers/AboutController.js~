@@ -1,0 +1,14 @@
+angular
+  .module('app')
+  .controller('AboutController', ['$scope', '$state', 'anchorScroll', function($scope,
+      $state, $anchorScroll) {
+      $scope.gotoAnchor = function(hash) {
+	  // set the location.hash to the id of
+	  // the element you wish to scroll to.
+	  $location.hash(hash);
+	  
+	  // call $anchorScroll()
+	  $anchorScroll();
+      };
+
+  }]);

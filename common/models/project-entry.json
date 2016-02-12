@@ -1,0 +1,35 @@
+{
+  "name": "ProjectEntry",
+  "plural": "ProjectEntries",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "ctime": {
+      "type": "date",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "published": {
+      "type": "boolean",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
