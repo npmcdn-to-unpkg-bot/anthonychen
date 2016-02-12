@@ -20,22 +20,30 @@
   <body ng-app="app">
     <div ng-class="{'navbar-inverse': $state.current.name != 'intro'}" class="navbar navbar-fixed-top" role="navigation"> 
       <div class="container"> 
-        <div class="navbar-header"> 
+	<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" ui-sref="intro">Anthony Chen</a> 
-        </div> 
-	<ul class="navbar-nav nav navbar-right">
-	  <li><a ng-class="{active: $state.current.name == 'about'}" ui-sref="about">ABOUT</a></li>
-	  <li><a ng-class="{active: $state.current.name.match('projects')}" ui-sref="projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECTS</a>
-	    <ul class="dropdown-menu">
-	      <li><a ng-class="{active: $state.current.name == 'projectsAquatics'}" ui-sref="projectsAquatics">AQUATICS</a></li>
-	      <li><a ng-class="{active: $state.current.name == 'projects3DPrinting'}" ui-sref="projects3dPrinting">3D PRINTING</a></li>
-	      <li><a ng-class="{active: $state.current.name == 'projectsCNCRouting'}" ui-sref="projectsCNCRouting">CNC ROUTING</a></li>
-	      <li><a ng-class="{active: $state.current.name == 'projectsSoftware'}" ui-sref="projectsSoftware">SOFTWARE</a></li>
-	    </ul>
-	  </li>
-	  <li><a ng-class="{active: $state.current.name == 'resume'}" ui-sref="resume">RESUME</a></li>
-	  <li><a ng-class="{active: $state.current.name == 'contact'}" i-sref="contact">CONTACT</a></li>
-	</ul>
+        </div>
+	<div id="navbar" class="collapse navbar-collapse navbar-right">
+	  <ul class="navbar-nav nav">
+	    <li><a ng-class="{active: $state.current.name == 'about'}" ui-sref="about">ABOUT</a></li>
+	    <li><a ng-class="{active: $state.current.name.match('projects')}" ui-sref="projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECTS</a>
+	      <ul class="dropdown-menu">
+		<li><a ng-class="{active: $state.current.name == 'projectsAquatics'}" ui-sref="projectsAquatics">AQUATICS</a></li>
+		<li><a ng-class="{active: $state.current.name == 'projects3DPrinting'}" ui-sref="projects3dPrinting">3D PRINTING</a></li>
+		<li><a ng-class="{active: $state.current.name == 'projectsCNCRouting'}" ui-sref="projectsCNCRouting">CNC ROUTING</a></li>
+		<li><a ng-class="{active: $state.current.name == 'projectsSoftware'}" ui-sref="projectsSoftware">SOFTWARE</a></li>
+	      </ul>
+	    </li>
+	    <li><a ng-class="{active: $state.current.name == 'resume'}" ui-sref="resume">RESUME</a></li>
+	    <li><a ng-class="{active: $state.current.name == 'contact'}" ui-sref="contact">CONTACT</a></li>
+	  </ul>
+	</div>
       </div>
     </div> 
     <div ui-view></div>
