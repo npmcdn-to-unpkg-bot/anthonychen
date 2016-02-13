@@ -1,9 +1,22 @@
-<div class="content container">
+<div class="content container" ng-init="projectEntryType = 'Aquatics'">
   <h1><a ui-sref="projects">Projects</a> / Aquatics</h1>
   <div class="list-group">
     <div ng-if="projectEntries.length == 0">
       No project entries yet.
     </div>
-    <a class="list-group-item" ng-repeat="projectEntry in projectEntries">{{projectEntry.title}}</a>
+    <a class="list-group-item" ng-repeat="projectEntry in projectEntries">{{projectEntry.title}} - {{projectEntry.content}}</a>
+  </div>
+  <div class="row">
+    <form ng-submit="addProjectEntry()">
+      <div class="form-group">
+	<label for="title">Title</label>
+	<input type="text" class="form-control" id="title" placeholder="Title" ng-model="newProjectEntry.title">
+      </div>
+      <div class="form-group">
+	<label for="content">Content</label>
+	<textarea class="form-control" id="content" placeholder="Content" rows="6" ng-model="newProjectEntry.content"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default"">Add Project Entry</button>
+    </form>
   </div>
 </div>
