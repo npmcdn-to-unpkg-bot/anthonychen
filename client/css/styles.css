@@ -26,3 +26,6 @@ body {
 .navbar-inverse .navbar-nav > li > a.active, .navbar-inverse .navbar-nav > li > a.active {
     color: #23527c;
 }
+#spyAbout .nav a {
+    color: #666;
+}
