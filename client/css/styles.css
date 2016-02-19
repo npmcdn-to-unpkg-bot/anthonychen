@@ -29,3 +29,10 @@ body {
 #spyAbout .nav a {
     color: #666;
 }
+.masonry-brick {
+    padding: 10px;
+}
+.masonry-brick p {
+    text-align: center;
+    font-style: italic;
+}

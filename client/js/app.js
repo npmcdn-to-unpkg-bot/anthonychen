@@ -1,7 +1,8 @@
 angular
     .module('app', [
 	'lbServices',
-	'ui.router'
+	'ui.router',
+	'wu.masonry'
     ])
     .run([
         "$rootScope", "$state", "$stateParams", function($rootScope, $state, $stateParams) {
@@ -31,7 +32,8 @@ angular
 	    })
 	    .state('portfolio', {
 		url: '/portfolio',
-		templateUrl: 'views/portfolio.html'
+		templateUrl: 'views/portfolio.html',
+		controller: 'PortfolioController'
 	    })
 	    .state('projects', {
 		url: '/projects',
