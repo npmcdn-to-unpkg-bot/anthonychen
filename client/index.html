@@ -32,6 +32,7 @@
 	<div id="navbar" class="collapse navbar-collapse navbar-right">
 	  <ul class="navbar-nav nav">
 	    <li><a ng-class="{active: $state.current.name == 'about'}" ui-sref="about">ABOUT</a></li>
+	    <li><a ng-class="{active: $state.current.name == 'portfolio'}" ui-sref="portfolio">PORTFOLIO</a></li>
 	    <li><a ng-class="{active: $state.current.name.match('projects')}" ui-sref="projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECTS</a>
 	      <ul class="dropdown-menu">
 		<li><a ng-class="{active: $state.current.name == 'projectsAquatics'}" ui-sref="projectsAquatics">AQUATICS</a></li>
