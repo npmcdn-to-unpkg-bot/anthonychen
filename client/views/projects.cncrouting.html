@@ -11,10 +11,14 @@
   <div class="page-header">
     <h1>Projects: CNC Routing</h1>
   </div>
-  <div class="list-group">
-    <div ng-if="projectEntries.length == 0">
-      No project entries yet. Stay tuned, I'm working on it!
+  <div ng-if="projectEntries.length == 0">
+    No project entries yet.  Stay tuned, I'm working on it!
+  </div>
+  <div class="row" ng-repeat="projectEntry in projectEntries">
+    <div class="col-sm-12">
+      <h2>{{projectEntry.title}}<small> - {{projectEntry.ctime | date}}</small></h2>
+      <p ng-bind-html="projectEntry.content">
+      </p>
     </div>
-    <a class="list-group-item" ng-repeat="projectEntry in projectEntries">{{projectEntry.title}}</a>
   </div>
 </div>

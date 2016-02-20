@@ -11,23 +11,14 @@
   <div class="page-header">
     <h1>Projects: Aquatics</h1>
   </div>
-  <div class="list-group">
-    <div ng-if="projectEntries.length == 0">
-      No project entries yet.  Stay tuned, I'm working on it!
-    </div>
-    <a class="list-group-item" ng-repeat="projectEntry in projectEntries">{{projectEntry.title}} - {{projectEntry.content}}</a>
+  <div ng-if="projectEntries.length == 0">
+    No project entries yet.  Stay tuned, I'm working on it!
   </div>
-  <div class="row" ng-hide="true">
-    <form ng-submit="addProjectEntry()">
-      <div class="form-group">
-	<label for="title">Title</label>
-	<input type="text" class="form-control" id="title" placeholder="Title" ng-model="newProjectEntry.title">
-      </div>
-      <div class="form-group">
-	<label for="content">Content</label>
-	<textarea class="form-control" id="content" placeholder="Content" rows="6" ng-model="newProjectEntry.content"></textarea>
-      </div>
-      <button type="submit" class="btn btn-default"">Add Project Entry</button>
-    </form>
+  <div class="row" ng-repeat="projectEntry in projectEntries">
+    <div class="col-sm-12">
+      <h2>{{projectEntry.title}}<small> - {{projectEntry.ctime | date}}</small></h2>
+      <p ng-bind-html="projectEntry.content">
+      </p>
+    </div>
   </div>
 </div>

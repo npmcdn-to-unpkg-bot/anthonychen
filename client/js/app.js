@@ -2,7 +2,8 @@ angular
     .module('app', [
 	'lbServices',
 	'ui.router',
-	'wu.masonry'
+	'wu.masonry',
+	'ngSanitize'
     ])
     .run([
         "$rootScope", "$state", "$stateParams", function($rootScope, $state, $stateParams) {
